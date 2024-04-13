@@ -1,3 +1,4 @@
+import {config} from '@gluestack-ui/config';
 import {NavigationContainer} from '@react-navigation/native';
 import {NativeBaseProvider} from 'native-base';
 import React from 'react';
@@ -14,9 +15,11 @@ export default function App(): JSX.Element {
           'linear-gradient': require('react-native-linear-gradient').default,
         },
       }}>
-      <NavigationContainer>
-        {true ? <PrivateRoutes /> : <PublicRoutes />}
-      </NavigationContainer>
+      <GluestackUIProvider config={config}>
+        <NavigationContainer>
+          {true ? <PrivateRoutes /> : <PublicRoutes />}
+        </NavigationContainer>
+      </GluestackUIProvider>
     </NativeBaseProvider>
   );
 }

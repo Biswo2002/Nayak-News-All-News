@@ -1,4 +1,4 @@
-package com.rnstarter;
+package com.NayakNews;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

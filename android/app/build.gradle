@@ -74,9 +74,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.rnstarter"
+    namespace "com.NayakNews"
     defaultConfig {
-        applicationId "com.rnstarter"
+        applicationId "com.NayakNews"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
