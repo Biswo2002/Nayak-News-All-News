@@ -1,10 +1,11 @@
 import {config} from '@gluestack-ui/config';
+import {GluestackUIProvider} from '@gluestack-ui/themed';
 import {NavigationContainer} from '@react-navigation/native';
 import {NativeBaseProvider} from 'native-base';
 import React from 'react';
 import {PublicRoutes} from '~/routes';
 import PrivateRoutes from '~/routes/private';
-import CustomTheme from '~/styles';
+import {CustomTheme} from '~/styles';
 
 export default function App(): JSX.Element {
   return (
@@ -17,7 +18,7 @@ export default function App(): JSX.Element {
       }}>
       <GluestackUIProvider config={config}>
         <NavigationContainer>
-          {true ? <PrivateRoutes /> : <PublicRoutes />}
+          {!true ? <PrivateRoutes /> : <PublicRoutes />}
         </NavigationContainer>
       </GluestackUIProvider>
     </NativeBaseProvider>
